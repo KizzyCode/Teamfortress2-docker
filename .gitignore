@@ -1,0 +1,10 @@
+# Ignore .DS_Store
+.DS_Store
+
+# Ignore artifacts
+/mount/*
+!/mount/serveradmin.xml
+!/mount/serverconfig.xml
+
+# Ignore environments
+.env

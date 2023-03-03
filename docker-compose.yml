@@ -1,0 +1,21 @@
+version: "3.9"
+
+volumes:
+  appcache:
+
+services:
+  teamfortress2:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "27015:27015/udp"
+    volumes:
+      - appcache:/home/teamfortress2/app:rw
+      - ./files/server.cfg:/home/teamfortress2/app/tf/cfg/server.cfg:ro
+    environment:
+      - GAMESERVER_TOKEN=${GAMESERVER_TOKEN} # FIXME
+
+    stop_signal: SIGSTOP
+    stdin_open: true
+    tty: true
