@@ -11,5 +11,5 @@ Before you can use the server, you need to set two settings:
    https://steamcommunity.com/dev/managegameservers
  - Your server password in `files/server.cfg`
 
-# Docker Users
+## Docker Users
 The server runs as user `teamfortress2:10000` with group `teamfortress2:10000`.
